@@ -33,7 +33,7 @@ open class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is on
-    open var showSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)!{
+    open var showSecureTextImage:UIImage = UIImage(named: "visibility_off", in:BundleUtil.bundle, compatibleWith: nil)!{
         
         didSet{
             self.setImage(showSecureTextImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate),for: UIControl.State())
@@ -42,7 +42,7 @@ open class SecureTextToggleButton: UIButton {
     }
     
     /// Image to shown when the visibility is off
-    open var hideSecureTextImage:UIImage = UIImage(named: "visibility_off", in:BundleUtil.bundle, compatibleWith: nil)!
+    open var hideSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)!
     
     
     /// Tint of the image
@@ -62,7 +62,7 @@ open class SecureTextToggleButton: UIButton {
      
      - returns:
      */
-    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_on", in:BundleUtil.bundle, compatibleWith: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_off", in: BundleUtil.bundle, compatibleWith: nil)! , imageTint:UIColor = UIColor.gray)
+    public convenience init(showSecureTextImage:UIImage = UIImage(named: "visibility_off", in:BundleUtil.bundle, compatibleWith: nil)! , hideSecureTextImage:UIImage = UIImage(named: "visibility_on", in: BundleUtil.bundle, compatibleWith: nil)! , imageTint:UIColor = UIColor.gray)
     {
         self.init(frame:CGRect.zero)
         
